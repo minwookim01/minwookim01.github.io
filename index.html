@@ -32,16 +32,16 @@
 
     header {
       display: grid;
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: 220px 1fr;
       gap: 40px;
       align-items: start;
     }
 
     .photo {
       width: 200px;
-      height: 240px;
+      height: 200px;
       object-fit: cover;
-      border-radius: 6px;
+      border-radius: 50%;
       background: #f0f0f0;
       display: block;
     }
@@ -154,7 +154,7 @@
         grid-template-columns: 1fr;
         gap: 24px;
       }
-      .photo { width: 150px; height: 180px; }
+      .photo { width: 160px; height: 160px; }
       h1 { font-size: 2rem; }
       .news li { grid-template-columns: 75px 1fr; gap: 10px; }
     }
@@ -165,7 +165,7 @@
 
     <!-- ============ HEADER ============ -->
     <header>
-      <img src="photo.png" alt="Minwoo Kim" class="photo">
+      <img src="photo.jpg" alt="Minwoo Kim" class="photo">
 
       <div>
         <h1>Minwoo Kim</h1>
@@ -180,7 +180,7 @@
               <rect x="2" y="4" width="20" height="16" rx="2"/>
               <path d="m22 7-10 5L2 7"/>
             </svg>
-            <span>[your-email] at kookmin.ac.kr</span>
+            <span>minwoogood12 at kookmin.ac.kr</span>
           </div>
           <div class="row">
             <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -211,7 +211,7 @@
                 <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
               </svg>
             </a>
-            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/minwoogood12/" aria-label="LinkedIn" title="LinkedIn">
               <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/>
               </svg>
@@ -233,7 +233,7 @@
       <p>
         My research focuses on <strong>object detection and 3D vision</strong>.
         I am also broadly interested in multimodal learning and its applications
-        to autonomous systems and human-computer interaction.
+        to autonomous driving.
       </p>
     </section>
 
@@ -242,8 +242,8 @@
       <h2>News</h2>
       <ul class="news">
         <li>
-          <span class="date">2026-XX</span>
-          <span>Submitted <em>GeoCoop</em> to <strong>ICML 2026</strong>.</span>
+          <span class="date">2026-05</span>
+          <span><em>Memory as Dynamics</em> accepted to <strong>ICML 2026</strong>.</span>
         </li>
       </ul>
     </section>
@@ -253,9 +253,9 @@
       <h2>Publications</h2>
       <ul class="pub-list">
         <li>
-          <span class="pub-title">GeoCoop: Geometry-Grounded Contrastive Learning for Cooperative 3D Multi-Object Tracking</span><br>
-          <span class="you">Minwoo Kim</span>, [Co-author], [Advisor]<br>
-          <span class="pub-venue">Under review, ICML 2026</span>
+          <span class="pub-title">Memory as Dynamics: Learning Reliability-Guided Predictive Models for Online Video Perception</span><br>
+          <span class="you">Minwoo Kim</span>, Sangmin Yoon<br>
+          <span class="pub-venue">International Conference on Machine Learning (ICML), 2026</span>
         </li>
       </ul>
     </section>
