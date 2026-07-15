@@ -80,6 +80,11 @@
       font-weight: 400;
     }
 
+    /* Align the Research heading with the paper image. */
+    .research > h2 {
+      margin-left: 22px;
+    }
+
     .paper-card {
       display: grid;
       grid-template-columns: 220px minmax(0, 1fr);
@@ -146,6 +151,10 @@
       }
 
       .research { padding: 22px 20px; }
+
+      .research > h2 {
+        margin-left: 0;
+      }
 
       .paper-card {
         grid-template-columns: 1fr;
@@ -229,7 +238,9 @@
           </div>
 
           <p class="paper-summary">
-            Reliability-guided predictive memory selectively uses future cues only when they are trustworthy, reducing memory contamination and identity drift after occlusion while improving long-term visual tracking and video object segmentation. 
+            Reliability-guided predictive memory selectively uses future cues only when they are trustworthy,
+            reducing memory contamination and identity drift after occlusion while improving long-term visual
+            tracking and video object segmentation.
           </p>
         </div>
       </article>
