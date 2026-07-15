@@ -7,12 +7,16 @@
   <title>Minwoo Kim</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #ffffff;
       color: #000000;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.45;
     }
 
@@ -24,100 +28,99 @@
     a:hover,
     a:focus {
       color: #f09228;
-      text-decoration: none;
     }
 
     p {
-      margin-top: 0;
-      margin-bottom: 14px;
+      margin: 0 0 16px;
     }
 
     .page {
-      width: 100%;
-      max-width: 800px;
+      width: calc(100% - 40px);
+      max-width: 1000px;
       margin: 0 auto;
-      border: 0;
-      border-spacing: 0;
-      border-collapse: separate;
     }
 
-    .intro-text {
-      width: 63%;
-      padding: 2.5%;
-      vertical-align: middle;
-    }
-
-    .intro-photo {
-      width: 37%;
-      max-width: 37%;
-      padding: 2.5%;
-      vertical-align: middle;
-      text-align: center;
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(210px, 0.8fr);
+      gap: 36px;
+      align-items: center;
+      padding: 38px 24px 26px;
     }
 
     .name {
-      margin: 0 0 22px;
+      margin: 0 0 24px;
       text-align: center;
-      font-size: 32px;
+      font-size: 36px;
       line-height: 1.1;
       font-weight: 400;
     }
 
     .profile-photo {
-      width: 100%;
-      max-width: 230px;
-      aspect-ratio: 1 / 1;
+      width: 220px;
+      height: 220px;
+      max-width: 100%;
       object-fit: cover;
-      object-position: center 28%;
       border-radius: 50%;
-    }
-
-    .links {
-      margin-top: 18px;
-      text-align: center;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.3;
-      font-weight: 400;
-    }
-
-    .research-heading {
-      padding: 20px 2.5% 6px;
-    }
-
-    .research-description {
-      padding: 0 2.5% 14px;
-    }
-
-    .paper-image-cell {
-      width: 25%;
-      padding: 16px 2.5%;
-      vertical-align: middle;
-    }
-
-    .paper-image {
-      width: 100%;
-      max-width: 180px;
-      height: auto;
       display: block;
       margin: 0 auto;
     }
 
-    .paper-text-cell {
-      width: 75%;
-      padding: 16px 2.5%;
-      vertical-align: middle;
+    .links {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    .research {
+      padding: 26px 24px 22px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 26px;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+
+    .paper-card {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      margin: 26px 0 40px;
+      padding: 22px;
+      background: #ffffd0;
+    }
+
+    .paper-image {
+      width: 220px;
+      height: 220px;
+      max-width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .paper-info {
+      min-width: 0;
+      font-size: 16px;
+      line-height: 1.35;
     }
 
     .paper-title {
-      font-size: 16px;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 1.25;
       font-weight: 700;
     }
 
+    .authors {
+      margin-bottom: 2px;
+    }
+
     .me {
+      color: #000000;
       font-weight: 700;
     }
 
@@ -125,113 +128,129 @@
       font-style: italic;
     }
 
-    @media (max-width: 650px) {
-      .intro-text,
-      .intro-photo,
-      .paper-image-cell,
-      .paper-text-cell {
-        display: block;
-        width: auto;
-        max-width: none;
+    .paper-links {
+      margin-top: 2px;
+    }
+
+    .paper-summary {
+      margin-top: 22px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: 100%;
       }
 
-      .intro-photo {
-        padding-top: 0;
+      .intro {
+        grid-template-columns: 1fr;
+        padding: 28px 20px;
       }
 
       .profile-photo {
-        max-width: 190px;
+        width: 190px;
+        height: 190px;
+      }
+
+      .research {
+        padding: 22px 20px;
+      }
+
+      .paper-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px;
       }
 
       .paper-image {
-        max-width: 240px;
+        width: min(100%, 260px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
       }
     }
   </style>
 </head>
 
 <body>
-  <table class="page" role="presentation">
-    <tbody>
-      <tr>
-        <td class="intro-text">
-          <p class="name">Minwoo Kim</p>
+  <main class="page">
+    <section class="intro">
+      <div>
+        <p class="name">Minwoo Kim</p>
 
-          <p>
-            I am an undergraduate researcher in the Department of Computer Science at
-            <a href="https://english.kookmin.ac.kr/" target="_blank" rel="noopener noreferrer">Kookmin University</a>,
-            where I am a member of the HCI Lab. I am currently a visiting undergraduate researcher in the
-            <a href="https://duttgroup.ics.uci.edu/" target="_blank" rel="noopener noreferrer">Dutt Research Group</a>
-            at the University of California, Irvine, advised by Prof. Nikil Dutt.
-          </p>
+        <p>
+          I am an undergraduate researcher in the Department of Computer Science at
+          <a href="https://english.kookmin.ac.kr/" target="_blank" rel="noopener noreferrer">Kookmin University</a>,
+          where I am a member of the HCI Lab. I am currently a visiting undergraduate researcher in the
+          <a href="https://duttgroup.ics.uci.edu/" target="_blank" rel="noopener noreferrer">Dutt Research Group</a>
+          at the University of California, Irvine, advised by Prof. Nikil Dutt.
+        </p>
 
-          <p>
-            My research interests include autonomous and cooperative driving, multi-agent perception,
-            3D perception and tracking, vision-language models, and multimodal learning.
-          </p>
+        <p>
+          My research interests include autonomous and cooperative driving, multi-agent perception,
+          3D perception and tracking, vision-language models, and multimodal learning.
+        </p>
 
-          <p class="links">
-            <a href="mailto:minwoogood12@kookmin.ac.kr">Email</a>
-            &nbsp;/&nbsp;
-            <a href="cv.pdf" target="_blank">CV</a>
-            &nbsp;/&nbsp;
-            <!-- Replace # with your Google Scholar profile URL. -->
-            <a href="#">Scholar</a>
-            &nbsp;/&nbsp;
-            <a href="https://www.linkedin.com/in/minwoogood12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            &nbsp;/&nbsp;
-            <a href="https://github.com/minwookim01" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </p>
-        </td>
+        <p class="links">
+          <a href="mailto:minwoogood12@kookmin.ac.kr">Email</a>
+          &nbsp;/&nbsp;
+          <a href="cv.pdf" target="_blank">CV</a>
+          &nbsp;/&nbsp;
+          <a href="#">Scholar</a>
+          &nbsp;/&nbsp;
+          <a href="https://www.linkedin.com/in/minwoogood12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          &nbsp;/&nbsp;
+          <a href="https://github.com/minwookim01" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
 
-        <td class="intro-photo">
-          <img
-            src="image/photo.jpeg"
-            alt="Minwoo Kim"
-            class="profile-photo">
-        </td>
-      </tr>
+      <div>
+        <img
+          src="image/thumbnail.png"
+          alt="Minwoo Kim"
+          class="profile-photo">
+      </div>
+    </section>
 
-      <tr>
-        <td colspan="2" class="research-heading">
-          <h2>Research</h2>
-        </td>
-      </tr>
+    <section class="research">
+      <h2>Research</h2>
 
-      <tr>
-        <td colspan="2" class="research-description">
-          <p>
-            I am interested in computer vision and multimodal learning for reliable perception in autonomous systems.
-            My current research explores communication-efficient visual intelligence, online video perception,
-            and robust perception under dynamic and resource-constrained environments.
-          </p>
-        </td>
-      </tr>
+      <p>
+        I am interested in computer vision and multimodal learning for reliable perception in autonomous systems.
+        My current research explores communication-efficient visual intelligence, online video perception,
+        and robust perception under dynamic and resource-constrained environments.
+      </p>
 
-      <tr>
-        <td class="paper-image-cell">
-          <img
-            src="image/memoryasdynamics.png"
-            alt="Memory as Dynamics paper thumbnail"
-            class="paper-image">
-        </td>
+      <article class="paper-card">
+        <img
+          src="image/memoryasdynamics.png"
+          alt="Memory as Dynamics paper thumbnail"
+          class="paper-image">
 
-        <td class="paper-text-cell">
+        <div class="paper-info">
           <a class="paper-title" href="#">
             Memory as Dynamics: Learning Reliability-Guided Predictive Models for Online Video Perception
           </a>
-          <br>
-          <span class="me">Minwoo Kim</span>, Sangmin Yoon
-          <br>
-          <span class="venue">International Conference on Machine Learning (ICML)</span>, 2026
-          <br>
-          <!-- Add the paper or project links here when available. -->
-          <p>
+
+          <div class="authors">
+            <a class="me" href="#" target="_blank" rel="noopener noreferrer">Minwoo Kim</a>,
+            <a href="#" target="_blank" rel="noopener noreferrer">Sangmin Yoon</a>
+          </div>
+
+          <div>
+            <span class="venue">International Conference on Machine Learning (ICML)</span>, 2026
+          </div>
+
+          <div class="paper-links">
+            <a href="#" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </div>
+
+          <p class="paper-summary">
             A reliability-guided predictive framework for robust online video perception in dynamic environments.
           </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </div>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
