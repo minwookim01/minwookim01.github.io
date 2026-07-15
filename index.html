@@ -7,9 +7,7 @@
   <title>Minwoo Kim</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -30,9 +28,7 @@
       color: #f09228;
     }
 
-    p {
-      margin: 0 0 16px;
-    }
+    p { margin: 0 0 16px; }
 
     .page {
       width: calc(100% - 40px);
@@ -61,6 +57,7 @@
       height: 220px;
       max-width: 100%;
       object-fit: cover;
+      object-position: center 18%;
       border-radius: 50%;
       display: block;
       margin: 0 auto;
@@ -97,8 +94,11 @@
       width: 220px;
       height: 220px;
       max-width: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center;
+      background: #ffffff;
       display: block;
+      padding: 8px;
     }
 
     .paper-info {
@@ -115,22 +115,16 @@
       font-weight: 700;
     }
 
-    .authors {
-      margin-bottom: 2px;
-    }
+    .authors { margin-bottom: 2px; }
 
     .me {
       color: #000000;
       font-weight: 700;
     }
 
-    .venue {
-      font-style: italic;
-    }
+    .venue { font-style: italic; }
 
-    .paper-links {
-      margin-top: 2px;
-    }
+    .paper-links { margin-top: 2px; }
 
     .paper-summary {
       margin-top: 22px;
@@ -138,9 +132,7 @@
     }
 
     @media (max-width: 700px) {
-      .page {
-        width: 100%;
-      }
+      .page { width: 100%; }
 
       .intro {
         grid-template-columns: 1fr;
@@ -150,11 +142,10 @@
       .profile-photo {
         width: 190px;
         height: 190px;
+        object-position: center 18%;
       }
 
-      .research {
-        padding: 22px 20px;
-      }
+      .research { padding: 22px 20px; }
 
       .paper-card {
         grid-template-columns: 1fr;
@@ -164,8 +155,7 @@
 
       .paper-image {
         width: min(100%, 260px);
-        height: auto;
-        aspect-ratio: 1 / 1;
+        height: 260px;
         margin: 0 auto;
       }
     }
@@ -205,10 +195,7 @@
       </div>
 
       <div>
-        <img
-          src="image/photo.jpeg"
-          alt="Minwoo Kim"
-          class="profile-photo">
+        <img src="image/photo.jpeg" alt="Minwoo Kim" class="profile-photo">
       </div>
     </section>
 
@@ -234,7 +221,9 @@
 
           <div class="authors">
             <a class="me" href="#" target="_blank" rel="noopener noreferrer">Minwoo Kim</a>,
-            <a href="#" target="_blank" rel="noopener noreferrer">Sangmin Yoon</a>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=V6HVW-QAAAAJ"
+               target="_blank"
+               rel="noopener noreferrer">Sangmin Yoon</a>
           </div>
 
           <div>
