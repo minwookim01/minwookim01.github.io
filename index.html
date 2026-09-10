@@ -1,253 +1,94 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Minwoo Kim — Computer vision and multimodal learning researcher.">
+  <meta name="description" content="Minwoo Kim is a computer vision researcher working on multimodal perception, autonomous systems, and robotics.">
+  <meta name="theme-color" content="#ffffff">
   <title>Minwoo Kim</title>
-
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: #ffffff;
-      color: #000000;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      line-height: 1.45;
-    }
-
-    a {
-      color: #1772d0;
-      text-decoration: none;
-    }
-
-    a:hover,
-    a:focus {
-      color: #f09228;
-    }
-
-    p { margin: 0 0 16px; }
-
-    .page {
-      width: calc(100% - 40px);
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .intro {
-      display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(210px, 0.8fr);
-      gap: 36px;
-      align-items: center;
-      padding: 38px 24px 26px 46px;
-    }
-
-    .name {
-      margin: 0 0 24px;
-      text-align: center;
-      font-size: 36px;
-      line-height: 1.1;
-      font-weight: 400;
-    }
-
-    .profile-photo {
-      width: 220px;
-      height: 220px;
-      max-width: 100%;
-      object-fit: cover;
-      object-position: center 18%;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .links {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 17px;
-    }
-
-    .research {
-      padding: 26px 24px 22px;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 26px;
-      line-height: 1.3;
-      font-weight: 400;
-    }
-
-    /* Align the Research heading with the paper image. */
-    .research > h2 {
-      margin-left: 22px;
-    }
-
-    .paper-card {
-      display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
-      gap: 24px;
-      align-items: center;
-      margin: 26px 0 40px;
-      padding: 22px;
-      background: #ffffff;
-    }
-
-    .paper-image {
-      width: 220px;
-      height: 220px;
-      max-width: 100%;
-      object-fit: contain;
-      object-position: center;
-      background: #ffffff;
-      display: block;
-      padding: 8px;
-    }
-
-    .paper-info {
-      min-width: 0;
-      font-size: 16px;
-      line-height: 1.35;
-    }
-
-    .paper-title {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 18px;
-      line-height: 1.25;
-      font-weight: 700;
-    }
-
-    .authors { margin-bottom: 2px; }
-
-    .me {
-      color: #000000;
-      font-weight: 700;
-    }
-
-    .venue { font-style: italic; }
-
-    .paper-links { margin-top: 2px; }
-
-    .paper-summary {
-      margin-top: 8px;
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 700px) {
-      .page { width: 100%; }
-
-      .intro {
-        grid-template-columns: 1fr;
-        padding: 28px 20px;
-      }
-
-      .profile-photo {
-        width: 190px;
-        height: 190px;
-        object-position: center 18%;
-      }
-
-      .research { padding: 22px 20px; }
-
-      .research > h2 {
-        margin-left: 0;
-      }
-
-      .paper-card {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 20px;
-      }
-
-      .paper-image {
-        width: min(100%, 260px);
-        height: 260px;
-        margin: 0 auto;
-      }
-    }
-  </style>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('theme');
+      const preferred = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = saved || preferred;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
-
 <body>
-  <main class="page">
-    <section class="intro">
-      <div>
-        <p class="name">Minwoo Kim</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav aria-label="Primary navigation">
+      <a class="active" href="#about">about</a>
+      <a href="#publications">publications</a>
+      <button id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Change theme">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
 
-        <p>
-          I am an undergraduate researcher in the Department of Computer Science at
-          <a href="https://english.kookmin.ac.kr/" target="_blank" rel="noopener noreferrer">Kookmin University</a>,
-          where I am a member of the HCI Lab. I am currently a visiting undergraduate researcher in the
-          <a href="https://duttgroup.ics.uci.edu/" target="_blank" rel="noopener noreferrer">Dutt Research Group</a>
-          at the University of California, Irvine, advised by Prof. Nikil Dutt.
-        </p>
-
-        <p>
-          My research interests include computer vision, robotics, and perception for autonomous systems.
-        </p>
-
-        <p class="links">
-          <a href="mailto:minwoogood12@kookmin.ac.kr">Email</a>
-          &nbsp;/&nbsp;
-          <a href="image/Curriculum_Vitae.pdf" target="_blank">CV</a>
-          &nbsp;/&nbsp;
-          <a href="https://scholar.google.com/citations?user=IVW0EVEAAAAJ&hl=ko">Scholar</a>
-          &nbsp;/&nbsp;
-          <a href="https://www.linkedin.com/in/minwoogood12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          &nbsp;/&nbsp;
+  <main id="main">
+    <section class="about" id="about">
+      <h1><strong>Minwoo</strong> Kim</h1>
+      <aside class="profile" aria-label="Minwoo Kim profile links">
+        <img src="image/photo.jpeg" alt="Portrait of Minwoo Kim">
+        <div class="social-links">
+          <a href="mailto:minwoogood12@kookmin.ac.kr" aria-label="Email">Email</a>
+          <a href="https://scholar.google.com/citations?user=IVW0EVEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
           <a href="https://github.com/minwookim01" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </p>
-      </div>
-
-      <div>
-        <img src="image/photo.jpeg" alt="Minwoo Kim" class="profile-photo">
-      </div>
-    </section>
-
-    <section class="research">
-      <h2>Research</h2>
-
-      <article class="paper-card">
-        <img
-          src="image/memoryasdynamics.png"
-          alt="Memory as Dynamics paper thumbnail"
-          class="paper-image">
-
-        <div class="paper-info">
-          <a
-            class="paper-title"
-            href="https://github.com/minwookim01/memory-as-dynamics"
-            target="_blank"
-            rel="noopener noreferrer">
-            Memory as Dynamics: Learning Reliability-Guided Predictive Models for Online Video Perception
-          </a>
-
-          <div class="authors">
-            <a class="me" href="https://scholar.google.com/citations?user=IVW0EVEAAAAJ&hl=ko" target="_blank" rel="noopener noreferrer">Minwoo Kim</a>,
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=V6HVW-QAAAAJ"
-               target="_blank"
-               rel="noopener noreferrer">Sangmin Yoon</a>
-          </div>
-
-          <div>
-            <span class="venue">International Conference on Machine Learning (ICML)</span>, 2026
-          </div>
-
-          <div class="paper-links">
-            <a href="https://openreview.net/pdf?id=DiIUn7KZ2k" target="_blank" rel="noopener noreferrer">paper</a>
-          </div>
-
-          <p class="paper-summary">
-            Reliability-guided predictive memory selectively uses future cues only when they are trustworthy,
-            reducing memory contamination and identity drift after occlusion while improving long-term visual
-            tracking and video object segmentation.
-          </p>
+          <a href="https://www.linkedin.com/in/minwoogood12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-      </article>
+        <p>minwoogood12 [at]<br>kookmin [dot] ac [dot] kr</p>
+      </aside>
+      <div class="about-copy">
+        <p>I am an undergraduate researcher in Computer Science at <a href="https://english.kookmin.ac.kr/" target="_blank" rel="noopener noreferrer">Kookmin University</a>, advised by Prof. Sangmin Yoon in the HCI Lab.</p>
+        <p>I study how robots can use what they see—together with predictions of what may happen next—to decide how to move. My work spans <strong>temporal visual modeling</strong>, <strong>cooperative 3D perception</strong>, and <strong>efficient vision-language systems</strong>.</p>
+        <p>My long-term goal is to connect predictive visual representations with planning and active perception, enabling robots to reason about changing environments and navigate autonomously. Previously, I was a visiting undergraduate researcher in the <a href="https://duttgroup.ics.uci.edu/" target="_blank" rel="noopener noreferrer">Dutt Research Group</a> at UC Irvine, advised by Prof. Nikil Dutt.</p>
+      </div>
     </section>
+
+    <section id="news">
+      <h2>news</h2>
+      <div class="news-list">
+        <article><time datetime="2026-05">May 2026</time><p>Excited to share that my first paper, <a href="https://openreview.net/pdf?id=DiIUn7KZ2k" target="_blank" rel="noopener noreferrer">Memory as Dynamics</a>, was accepted to ICML 2026.</p></article>
+        <article><time datetime="2026-04">Apr 2026</time><p>Started as a visiting undergraduate researcher with the Dutt Research Group at UC Irvine.</p></article>
+        <article><time datetime="2025-06">Jun 2025</time><p>Joined the HCI Lab at Kookmin University as an undergraduate researcher.</p></article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-title"><h2>selected publications</h2><a href="https://scholar.google.com/citations?user=IVW0EVEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div>
+      <div class="publication-list">
+        <article class="publication"><span class="tag">Preprint</span><div class="pub-body"><h3>FloodReasonBench: Benchmarking VLM Reasoning Segmentation for Embodied Flood Response at the Edge</h3><p class="authors">Rajat Bhattacharjya, Yoomee Jung, <strong>Minwoo Kim</strong>, Sing-Yao Wu, Eli Bozorgzadeh, Nalini Venkatasubramanian, Nikil Dutt</p><p class="venue"><em>arXiv preprint</em>, August 2026</p><div class="pub-links"><a href="https://arxiv.org/abs/2608.15410" target="_blank" rel="noopener noreferrer">Paper</a></div></div></article>
+        <article class="publication">
+          <span class="tag">ICML 2026</span>
+          <div class="pub-body"><h3>Memory as Dynamics: Learning Reliability-Guided Predictive Models for Online Video Perception</h3><p class="authors"><strong>Minwoo Kim</strong>, Sangmin Yoon</p><p class="venue"><em>Proceedings of the 43rd International Conference on Machine Learning (ICML)</em>, 2026</p><div class="pub-links"><a href="https://openreview.net/pdf?id=DiIUn7KZ2k" target="_blank" rel="noopener noreferrer">Paper</a><a href="https://github.com/minwookim01/memory-as-dynamics" target="_blank" rel="noopener noreferrer">Code</a></div></div>
+        </article>
+      </div>
+    </section>
+
   </main>
+
+  <footer><p>© Copyright 2026 Minwoo Kim. Last updated: September 10, 2026.</p></footer>
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector('#theme-toggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    function updateThemeButton() {
+      const dark = root.dataset.theme === 'dark';
+      toggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      toggle.setAttribute('aria-pressed', String(dark));
+      themeMeta.setAttribute('content', dark ? '#0b1220' : '#ffffff');
+    }
+    toggle.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', root.dataset.theme);
+      updateThemeButton();
+    });
+    updateThemeButton();
+  </script>
 </body>
 </html>
