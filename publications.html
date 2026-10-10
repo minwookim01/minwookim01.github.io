@@ -17,11 +17,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheet.css">
+  <style>
+    .site-name { margin-right: auto; white-space: nowrap; font-size: 20px; font-weight: 300; }
+    .site-name strong { font-weight: 700; }
+    .publications-title { margin: 0 0 8px; font-size: 36px; font-weight: 300; line-height: 1.2; }
+    @media (max-width: 575px) {
+      .publications-nav { gap: 10px; }
+      .site-name { font-size: 16px; }
+      .publications-title { font-size: 32px; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header>
-    <nav aria-label="Primary navigation">
+    <nav aria-label="Primary navigation" class="publications-nav">
+      <span class="site-name"><strong>Minwoo</strong> (Ethan) Kim</span>
       <a href="index.html">about</a>
       <a href="cv.pdf">cv</a>
       <a class="active" href="publications.html" aria-current="page">publications</a>
@@ -32,11 +43,8 @@
   </header>
 
   <main id="main">
-    <section class="about">
-      <h1><strong>Minwoo</strong> (Ethan) Kim</h1>
-    </section>
     <section id="publications">
-      <div class="section-title"><h2>publications</h2><a href="https://scholar.google.com/citations?user=IVW0EVEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div>
+      <div class="section-title"><h1 class="publications-title">publications</h1><a href="https://scholar.google.com/citations?user=IVW0EVEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div>
       <div class="publication-list">
         <article class="publication"><span class="tag">Preprint</span><div class="pub-body"><h3>FRESHLATENT: Channel-Aware Latent Adaptation for Resource-Constrained Embodied VLM Perception</h3><p class="authors">Rajat Bhattacharjya, <strong>Minwoo Kim</strong>, Arnab Sarkar, Tamoghno Das, Sing-Yao Wu, Eli Bozorgzadeh, Marco Levorato, Nikil Dutt</p><p class="venue"><em>arXiv preprint</em>, September 2026</p><div class="pub-links"><a href="https://arxiv.org/abs/2609.30629" target="_blank" rel="noopener noreferrer">Paper</a></div></div></article>
         <article class="publication"><span class="tag">Preprint</span><div class="pub-body"><h3>FloodReasonBench: Benchmarking VLM Reasoning Segmentation for Embodied Flood Response at the Edge</h3><p class="authors">Rajat Bhattacharjya, Yoomee Jung, <strong>Minwoo Kim</strong>, Sing-Yao Wu, Eli Bozorgzadeh, Nalini Venkatasubramanian, Nikil Dutt</p><p class="venue"><em>arXiv preprint</em>, August 2026</p><div class="pub-links"><a href="https://arxiv.org/abs/2608.15410" target="_blank" rel="noopener noreferrer">Paper</a></div></div></article>
